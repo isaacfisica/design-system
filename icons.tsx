@@ -1,4 +1,4 @@
-export type IconName = 'youtube' | 'stream' | 'x' | 'twitter' | 'discord' | 'support';
+export type IconName = 'youtube' | 'stream' | 'x' | 'twitter' | 'discord' | 'support' | 'blog';
 
 const DEFAULT_SIZE: Record<IconName, number> = {
   youtube: 22,
@@ -7,6 +7,7 @@ const DEFAULT_SIZE: Record<IconName, number> = {
   twitter: 20,
   discord: 22,
   support: 21,
+  blog: 22,
 };
 
 /* 플랫폼 아이콘 — 새 아이콘이 필요하면 IconName에 키를 추가하고
@@ -50,6 +51,12 @@ export function LinkIcon({ name, size }: { name: IconName; size?: number }) {
       return (
         <svg width={s} height={s} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 21s-7.4-4.6-9.6-9A5.1 5.1 0 0 1 12 6.6 5.1 5.1 0 0 1 21.6 12C19.4 16.4 12 21 12 21Z" />
+        </svg>
+      );
+    case 'blog':
+      return (
+        <svg width={s} height={s} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M4 19a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4Zm16-10h-6m6 4h-6" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" fill="none" />
         </svg>
       );
   }
