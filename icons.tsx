@@ -1,4 +1,4 @@
-import type { IconName } from '@/lib/data';
+export type IconName = 'youtube' | 'stream' | 'x' | 'twitter' | 'discord' | 'support';
 
 const DEFAULT_SIZE: Record<IconName, number> = {
   youtube: 22,
